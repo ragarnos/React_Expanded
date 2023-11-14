@@ -1,17 +1,16 @@
-import Header from "./Header";
-import UserInfo from "./UserInfo";
+import { cources } from "../assets/data/data";
+import CourseCard from "./CourseCard";
 
-const users = [
-  { name: "Jon", age: 34, city: "Kiev" },
-  { name: "Sara", age: 30, city: "Lviv" },
-  { name: "Oleg", age: 25, city: "Dnipro" },
-];
 
 function Content() {
   return (
     <>
-      <Header />
-      <UserInfo users={users}></UserInfo>
+      <div className="d-flex container">
+        {cources.map(course => (
+          <CourseCard key={course.id} course={course} />
+        ))}
+      </div>
+      
     </>
   );
 }
