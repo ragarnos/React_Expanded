@@ -1,12 +1,10 @@
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import "./assets/styles/App.scss";
-import Content from "./components/Content";
+import Users from "./components/Users";
 
 function App() {
   return (
     <>
-      <Content />
+      <Users />
     </>
     
   )
