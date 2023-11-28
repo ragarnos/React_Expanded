@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-function Users() {
+function AllUsers() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -39,7 +40,7 @@ function Users() {
       <div className="d-flex flex-wrap justify-space-start">
         {users.map((user) => (
           <div className="user__card" key={user.id}>
-            <h3 className="user__card__title">{user.name}</h3>
+            <Link className="user__card__title" to={`/users/${user.id}`}>{user.name}</Link>
             <p>{user.username}</p>
             <p>{user.email}</p>
             <p>{user.phone}</p>
@@ -50,4 +51,4 @@ function Users() {
     </div>
   );
 }
-export default Users;
+export default AllUsers;

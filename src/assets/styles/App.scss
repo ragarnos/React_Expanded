@@ -22,7 +22,7 @@
   text-align: center;
   font-family: arial;
   &__title{
-    color: grey;
+    color: rgb(69, 221, 18);
     font-size: 18px;
   }
   &__web{
@@ -30,4 +30,36 @@
   }
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
+.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  li {
+    float: left;
+    a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+  }
+}
+.active {
+  background-color: #04AA6D;
+}
+
+footer{
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
