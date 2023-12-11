@@ -1,12 +1,24 @@
+import { NavLink, Route, Routes } from "react-router-dom";
 import "./assets/styles/App.scss";
-import Counter from "./components/Counter";
-import { CounterProvider } from "./components/js/CounterContext";
+import Home from "./components/pages/Home";
+import AllUsers from "./components/pages/Allusers";
+import User from "./components/pages/User";
 function App() {
 
   return (
-    <CounterProvider>
-      <Counter />
-    </CounterProvider>
+    <> 
+    <nav>
+      <ul className="horizontal">
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/users'>User</NavLink></li>
+      </ul>
+    </nav>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/users" element={<AllUsers />} />
+          <Route path="/users/:userId" element={<User />} /> 
+        </Routes>
+    </>
   );
 }
 
